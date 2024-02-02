@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+START=1999
+start(){
+        /usr/share/opengw/opengw  >/dev/null 2>&1 &
+}
+
+stop(){
+       killall /usr/share/opengw/opengw 
+}
+
+restart(){
+        killall /usr/share/opengw/opengw && /usr/share/opengw/opengw >/dev/null 2>&1 &
+}

@@ -62,3 +62,24 @@ define KernelPackage/owl-loader/description
 endef
 
 $(eval $(call KernelPackage,owl-loader))
+
+define KernelPackage/net-aic8800
+  SUBMENU:=$(WIRELESS_MENU)
+  TITLE:=aic8800 support
+  DEPENDS:=@USB_SUPPORT +@DRIVER_WEXT_SUPPORT +kmod-usb-core
+  KCONFIG:=\
+        CONFIG_AIC8800_WLAN_SUPPORT=y
+        CONFIG_AIC_LOADFW_SUPPORT=y
+        CONFIG_AIC_WLAN_SUPPORT=y
+  FILES:= \
+        $(LINUX_DIR)/drivers/net/wireless/aic8800/aic8800_fdrv/aic8800_fdrv.ko \
+        $(LINUX_DIR)/drivers/net/wireless/aic8800/aic_load_fw/aic_load_fw.ko
+  AUTOLOAD:=$(call AutoProbe,aic8800_fdrv)
+endef
+
+define KernelPackage/net-aic8800/description
+ Kernel modules for aic8800 support
+endef
+
+$(eval $(call KernelPackage,net-aic8800))
+
