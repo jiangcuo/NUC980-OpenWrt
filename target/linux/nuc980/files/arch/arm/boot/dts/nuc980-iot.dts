@@ -281,7 +281,7 @@
 			status = "okay";
 		};
 		emac1@b0022000 {
-			status = "disabled";
+			status = "okay";
 		};
 		cap0@b0024000 {
 			status = "disabled";
