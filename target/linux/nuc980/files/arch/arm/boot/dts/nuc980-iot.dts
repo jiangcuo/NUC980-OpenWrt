@@ -23,10 +23,7 @@
 
 	apb {
 		uart1: serial@b0071000 {
-			pinctrl-names = "default";
-			pinctrl-0 = <&pinctrl_uart1_PF>;
-			pdma-enable = <1>;
-			status = "okay";
+			status = "disabled";
 		};
 
 		uart2: serial@b0072000 {
