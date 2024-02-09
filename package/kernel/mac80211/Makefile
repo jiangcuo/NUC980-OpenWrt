@@ -10,14 +10,13 @@ include $(INCLUDE_DIR)/kernel.mk
 
 PKG_NAME:=mac80211
 
-PKG_VERSION:=2017-01-31
-PKG_RELEASE:=15
-PKG_SOURCE_URL:=http://mirror2.openwrt.org/sources
-PKG_BACKPORT_VERSION:=
-PKG_HASH:=75e6d39e34cf156212a2509172a4a62b673b69eb4a1d9aaa565f7fa719fa2317
+PKG_VERSION:=4.4.2-1
+PKG_RELEASE:=1
+PKG_SOURCE_URL:= https://mirrors.edge.kernel.org/pub/linux/kernel/projects/backports/stable/v4.4.2/
+PKG_HASH:=a979e194c2ed9fdfca092a448e626d85c5af0e4de5ad993c0967afd15af01285
 
-PKG_SOURCE:=compat-wireless-$(PKG_VERSION)$(PKG_BACKPORT_VERSION).tar.xz
-PKG_BUILD_DIR:=$(KERNEL_BUILD_DIR)/compat-wireless-$(PKG_VERSION)
+PKG_SOURCE:=backports-$(PKG_VERSION).tar.xz
+PKG_BUILD_DIR:=$(KERNEL_BUILD_DIR)/backports-$(PKG_VERSION)
 PKG_BUILD_PARALLEL:=1
 
 PKG_MAINTAINER:=Felix Fietkau <nbd@nbd.name>
