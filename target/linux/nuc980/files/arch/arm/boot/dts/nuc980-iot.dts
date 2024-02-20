@@ -23,11 +23,17 @@
 
 	apb {
 		uart1: serial@b0071000 {
-			status = "disabled";
+			pinctrl-names = "default";
+			pinctrl-0 = <&pinctrl_uart1_PA>;
+			pdma-enable = <1>;
+			status = "okay";
 		};
 
 		uart2: serial@b0072000 {
-			status = "disabled";
+			pinctrl-names = "default";
+			pinctrl-0 = <&pinctrl_uart2_PA>;
+			pdma-enable = <1>;
+			status = "okay";
 		};
 
 		uart3: serial@b0073000 {
@@ -38,39 +44,35 @@
 			pinctrl-names = "default";
 			pinctrl-0 = <&pinctrl_uart4_PD>;
 			pdma-enable = <1>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		uart5: serial@b0075000 {
 			pinctrl-names = "default";
 			pinctrl-0 = <&pinctrl_uart5_PG>;
 			pdma-enable = <1>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		uart6: serial@b0076000 {
 			pinctrl-names = "default";
-			pinctrl-0 = <&pinctrl_uart6_PD>;
+			pinctrl-0 = <&pinctrl_uart6_PA>;
 			pdma-enable = <1>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		uart7: serial@b0077000 {
 			pinctrl-names = "default";
 			pinctrl-0 = <&pinctrl_uart7_PB>;
 			pdma-enable = <1>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		uart8: serial@b0078000 {
-			status = "disabled";
-		};
-
-		uart9: serial@b0079000 {
 			pinctrl-names = "default";
-			pinctrl-0 = <&pinctrl_uart9_PB_PE>;
+			pinctrl-0 = <&pinctrl_uart8_PA_PG>;
 			pdma-enable = <1>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		can0: can@b00a0000 {
