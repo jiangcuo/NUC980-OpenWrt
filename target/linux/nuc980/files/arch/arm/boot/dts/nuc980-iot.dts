@@ -206,7 +206,7 @@
 		};
 
 		i2c0: i2c0@b0080000 {
-			status = "okay";
+			status = "disabled";
 
 			nau8822: nau8822@1a {
 				compatible = "nuvoton,nau8822";
@@ -215,8 +215,8 @@
 		};
 
 		i2c1: i2c1@b0081000 {
-			status = "disabled";
-			pinctrl-0 = <&pinctrl_i2c1_PB>;
+			status = "okay";
+			pinctrl-0 = <&pinctrl_i2c1_PC>;
 		};
 
 
@@ -273,7 +273,7 @@
 		};
 
 		sdh@b0018000 {
-			status = "okay";
+			status = "disabled";
 		};
 
 		emac0@b0012000 {
@@ -293,18 +293,18 @@
 		};
 
 		i2s: i2s@b0020000 {
-			status = "okay";
+			status = "disabled";
 		};
 
 		i2s_pcm: i2s_pcm {
-			status = "okay";
+			status = "disabled";
 		};
 
 		sound {
 			compatible = "nuvoton,nuc980-audio";
 			i2s-controller = <&i2s>;
 			i2s-platform = <&i2s_pcm>;
-			status = "okay";
+			status = "disabled";
 		};
 		ebi: ebi@b0010000 {
 			status = "disabled";
